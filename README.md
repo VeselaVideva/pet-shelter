@@ -9,6 +9,7 @@ Angular project for SoftUni's JS Web Developer learning path.
 ### Tech Stack
 
 - Angular CLI 13.2.5
+- Firebase 9.6.8 - auth, database, hosting
 - NodeJS 14.17.6 / NPM 8.5.3
 - Typescript 4.6.2
 - GitHub
