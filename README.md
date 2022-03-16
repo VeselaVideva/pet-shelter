@@ -37,14 +37,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ### Public (guests)
 
 - page Home (click on logo)
+- page Sign Up (Register) 
+- page Sign In (Login) 
+- page Adopt a pet (shows all pets from the database)
 
 ### Private (users)
 
-- page ...
+- page Add a pet 
+- Edit & Delete buttons (visible only for users which have added the pet to the database)
+- page For adoption (shows a list with all pets that are available for adoption)
+- page Profile (each user has a profile page which shows a list with his animals added for adoption)
+- Sign Out button in the header is visible only to logged-in users
 
 ### Bonuses
 
-- ...
+- Write media queries CSS for Mobile and Tablet devices (... in progress)
 
 ### Author
 Vesela Videva - [https://videva.dev/](https://videva.dev/)
