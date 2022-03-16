@@ -4,7 +4,7 @@
 Angular project for SoftUni's JS Web Developer learning path.
 
 ### Live Demo
-[https://...in-progress/](https://.../)
+[https://pet-shelter-angular.web.app/](https://pet-shelter-angular.web.app/)
 
 ### Tech Stack
 

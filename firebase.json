@@ -5,7 +5,7 @@
   },
   "hosting": {
     "site": "pet-shelter-angular",
-    "public": "dist",
+    "public": "dist/pet-shelter",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -17,5 +17,8 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }
