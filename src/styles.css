@@ -1,4 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-  margin: 0;
+@import url("./reset.css");
+@import url("./typography.css");
+
+
+:root {
+  --color-accent: orange;
+  --color-steelblue: #4682b4;
+  --color-text: #333;
+  --color-white: #fff;
+  --color-lightgray: #f9f9f9;
+  --color-darkgray: #ccc;
+  --border-radius: 100rem;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
