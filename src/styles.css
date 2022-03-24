@@ -1,9 +1,8 @@
-@import url("./reset.css");
-@import url("./typography.css");
-
+@import url("./assets/reset.css");
+@import url("./assets/typography.css");
 
 :root {
-  --color-accent: orange;
+  --color-accent: #ffa500;
   --color-steelblue: #4682b4;
   --color-text: #333;
   --color-white: #fff;
@@ -11,4 +10,30 @@
   --color-darkgray: #ccc;
   --border-radius: 100rem;
   --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: var(--color-steelblue);
+}
+
+.form-container {
+  min-width: 90vw;
+  max-width: 90vw;
+  padding: 3rem;
+  background-color: var(--color-lightgray);
+  border-radius: 1rem;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form button {
+  margin: 1rem 0;
+}
+
+.center {
+  text-align: center;
 }
