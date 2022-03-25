@@ -1,0 +1,23 @@
+<div class="form-container mat-elevation-z1">
+  <form #addForm="ngForm" (ngSubmit)="submit()" [formGroup]="createForm">
+    <div *ngIf="!submitted">
+      <h2>Add new pet</h2>
+      <mat-form-field>
+        <input formControlName="name" matInput placeholder="Name" type="text">
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="age" matInput placeholder="Age" type="number">
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="description" matInput placeholder="Description" type="text">
+      </mat-form-field>
+      <button color="primary" mat-raised-button type="submit">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h6 class="center">You've added this pet successfully!</h6>
+      <button (click)="newPet(); addForm.resetForm()" color="primary" mat-raised-button>
+        Add new pet
+      </button>
+    </div>
+  </form>
+</div>
