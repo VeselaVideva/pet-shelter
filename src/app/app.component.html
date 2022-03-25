@@ -2,9 +2,10 @@
   <span>{{ title }}</span>
 
   <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
-    <button mat-button (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      Logout
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      <mat-icon>account_circle</mat-icon>
+      {{ user.displayName }}
+      <mat-icon>expand_more</mat-icon>
     </button>
   </ng-container>
 
@@ -16,6 +17,10 @@
   </ng-template>
 
 </mat-toolbar>
+
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item (click)="logout()">Logout</button>
+</mat-menu>
 
 <main class="content">
   <router-outlet></router-outlet>

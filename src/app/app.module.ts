@@ -9,6 +9,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -46,6 +47,7 @@ import { AddPetComponent } from './components/add-pet/add-pet.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
     ReactiveFormsModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
