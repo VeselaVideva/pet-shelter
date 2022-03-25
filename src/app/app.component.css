@@ -1,8 +1,24 @@
-main {
+.header {
+  height: 4rem;
+  background-color: var(--color-steelblue);
+  color: var(--color-white);
+  justify-content: space-between;
+}
+
+.content {
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 8rem);
+}
+
+.footer {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-steelblue);
+  color: var(--color-white);
 }
