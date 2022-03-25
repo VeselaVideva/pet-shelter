@@ -37,3 +37,7 @@ a:-webkit-any-link {
 .center {
   text-align: center;
 }
+
+.mat-error {
+  font-size: .75rem;
+}
