@@ -6,7 +6,10 @@ import {
   signInWithEmailAndPassword,
   updateProfile
 } from "@angular/fire/auth";
-import { from, switchMap } from "rxjs";
+import { concatMap, from, Observable, of, switchMap } from "rxjs";
+import firebase from "firebase/compat";
+import UserInfo = firebase.UserInfo;
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +27,18 @@ export class AuthService {
   signup(name: string, email: string, password: string) {
     return from(createUserWithEmailAndPassword(this.auth, email, password)).pipe(
       switchMap(({ user }) => updateProfile(user, { displayName: name}))
+    )
+  }
+
+  updateProfileData(profileData: Partial<UserInfo>): Observable<any> {
+    const user = this.auth.currentUser;
+
+    return of(user).pipe(
+      concatMap(user => {
+        if (!user) throw new Error('Not authenticated!');
+
+        return updateProfile(user, profileData);
+      })
     )
   }
 
