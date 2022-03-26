@@ -5,6 +5,15 @@
   justify-content: space-between;
 }
 
+.header img.profile-image-toolbar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  object-position: center;
+  margin-right: .25rem;
+}
+
 .content {
   padding: 4rem 0;
   display: flex;

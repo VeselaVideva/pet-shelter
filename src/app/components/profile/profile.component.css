@@ -1,0 +1,22 @@
+.profile-image > img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-image {
+  position: relative;
+}
+
+.profile-image > button {
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+}
+
+.mat-mini-fab.mat-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}

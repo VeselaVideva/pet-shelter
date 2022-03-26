@@ -1,5 +1,5 @@
-@import url("./assets/reset.css");
-@import url("./assets/typography.css");
+@import url("./assets/styles/reset.css");
+@import url("./assets/styles/typography.css");
 
 :root {
   --color-accent: #ffa500;
@@ -40,4 +40,8 @@ a:-webkit-any-link {
 
 .mat-error {
   font-size: .75rem;
+}
+
+.img-responsive {
+  max-width: 100%;
 }
