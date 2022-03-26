@@ -11,21 +11,24 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatMenuModule } from "@angular/material/menu";
 
+import { HotToastModule } from '@ngneat/hot-toast';
+
+import { environment } from '../environments/environment';
+
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { getStorage, provideStorage } from "@angular/fire/storage";
 
 import { AppComponent } from './app.component';
-
 import { AppRoutingModule } from './app-routing.module';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideAuth, getAuth } from '@angular/fire/auth';
-import { HotToastModule } from '@ngneat/hot-toast';
 
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AddPetComponent } from './components/add-pet/add-pet.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { AddPetComponent } from './components/add-pet/add-pet.component';
     HomeComponent,
     LoginComponent,
     SignUpComponent,
-    AddPetComponent
+    AddPetComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +56,7 @@ import { AddPetComponent } from './components/add-pet/add-pet.component';
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
+    provideStorage(() => getStorage()),
     HotToastModule.forRoot(),
     FormsModule
   ],
