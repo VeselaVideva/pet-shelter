@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../../services/auth/auth.service";
-import { ImageUploadService } from "../../services/image-upload.service";
+import { ImageUploadService } from "../../services/upload/image-upload.service";
 import { HotToastService } from "@ngneat/hot-toast";
 import { concatMap } from "rxjs";
 
