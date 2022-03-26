@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet } from "../../models/pet.model";
-import { RealtimeDbService } from "../../services/realtime-db.service";
+import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
