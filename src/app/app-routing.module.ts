@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomeComponent } from './components/home/home.component';
 import { AddPetComponent } from "./components/add-pet/add-pet.component";
+import { ProfileComponent } from "./components/profile/profile.component";
 
 const redirectToLogin = () => redirectUnauthorizedTo(['/login']);
 const redirectToHome = () => redirectLoggedInTo(['/home']);
@@ -34,6 +35,11 @@ const routes: Routes = [
   {
     path: 'add-pet',
     component: AddPetComponent,
+    ...canActivate(redirectToLogin)
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
     ...canActivate(redirectToLogin)
   }
 ];
