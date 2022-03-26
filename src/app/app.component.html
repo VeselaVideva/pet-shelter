@@ -29,6 +29,8 @@
 
 <main class="content">
   <router-outlet></router-outlet>
+  <mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
+  <button color="primary" mat-raised-button (click)="fetchData()">Fetch API data</button>
 </main>
 
 <footer class="footer">

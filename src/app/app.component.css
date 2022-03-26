@@ -15,12 +15,16 @@
 }
 
 .content {
-  padding: 4rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem 1rem;
   height: calc(100vh - 8rem);
+}
+
+.content .mat-progress-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
 .footer {
