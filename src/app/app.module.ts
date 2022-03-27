@@ -11,6 +11,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatCardModule } from "@angular/material/card";
 
 import { HotToastModule } from '@ngneat/hot-toast';
 
@@ -56,6 +57,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatInputModule,
     MatMenuModule,
     MatProgressSpinnerModule,
+    MatCardModule,
     ReactiveFormsModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),

@@ -1,1 +1,50 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
+.mat-card {
+  border-radius: 0.5rem;
+}
+
+.mat-card-image {
+  margin: 0 0 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.mat-card-actions {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mat-card > .mat-card-actions:last-child {
+  margin-bottom: 0;
+}
+
+.mat-card-actions .mat-raised-button,
+.mat-card-actions:not(.mat-card-actions-align-end) .mat-raised-button:first-child{
+  margin: 0;
+}
+
+/* MEDIA QUERIES CSS */
+@media screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .mat-card {
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mat-card {
+    max-width: calc(33.333% - 1.5rem);
+  }
+}
