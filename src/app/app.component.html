@@ -1,7 +1,7 @@
 <mat-toolbar class="header">
   <span routerLink="/">{{ title }}</span>
 
-  <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
+  <ng-container *ngIf="user$ | async as user; else loginButton">
     <button mat-button [matMenuTriggerFor]="userMenu">
       <img
         class="profile-image-toolbar"

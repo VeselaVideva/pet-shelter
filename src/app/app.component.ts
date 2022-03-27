@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from "./services/auth/auth.service";
 import { LoadingService } from "./services/loading/loading.service";
 import { HttpClient } from "@angular/common/http";
+import { UsersService } from './services/users/users.service';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +13,14 @@ import { HttpClient } from "@angular/common/http";
 export class AppComponent {
   title = 'Pet Shelter';
   loading$ = this.loader.loading$;
+  user$ = this.usersService.currentUserProfile$;
 
   constructor(
-    public authService: AuthService,
+    private authService: AuthService,
     private router: Router,
     public loader: LoadingService,
-    private http: HttpClient
+    private http: HttpClient,
+    private usersService: UsersService
   ) { }
 
   fetchData() {
