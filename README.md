@@ -9,49 +9,34 @@ Angular project for SoftUni's JS Web Developer learning path.
 ### Tech Stack
 
 - Angular CLI 13.2.5
-- Firebase 9.6.8 - auth, database, hosting
+- Angular Material
+- Firebase 9.6.8 - authentication, hosting, storage, firestore, realtime database
 - Typescript 4.6.2
+- RxJS 7.5.0
+- [@ngneat/hot-toast](https://www.npmjs.com/package/@ngneat/hot-toast)
+- [@ngneat/until-destroy](https://www.npmjs.com/package/@ngneat/until-destroy)
 - GitHub
 - GitHub Desktop
 
-### Dev server
-
-Run `ng serve` and navigate to `http://localhost:4200/`
-
-### Code scaffolding
-
-Run `ng generate component component-name` to generate a new component.
-
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-### Run unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Run E2E tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
 ### Public (guests)
 
-- page Home (click on logo)
-- page Sign Up (Register) 
-- page Sign In (Login) 
-- page Adopt a pet (shows all pets from the database)
+- page Home (click on logo) - shows all pets from the database
+- page Sign Up (Register) - added routh guard, so logged-in users can't access the page
+- page Sign In (Login) - added route guard, so logged-in users can't access the page
 
 ### Private (users)
 
-- page Add a pet 
-- Edit & Delete buttons (visible only for users which have added the pet to the database)
-- page For adoption (shows a list with all pets that are available for adoption)
-- page Profile (each user has a profile page which shows a list with his animals added for adoption)
-- Sign Out button in the header is visible only to logged-in users
+- page Add pet - added route guard, so only logged-in users can access the page
+- **TODO:** Edit & Delete buttons (visible only for users which have added the pet to the database)
+- page Profile (each user has a profile page... **TODO:** which shows a list with his animals added for adoption)
+- Logout button in the header user menu is visible only to logged-in users
 
 ### Bonuses
 
-- Write media queries CSS for Mobile and Tablet devices (... in progress)
+- App is deployed with Firebase hosting
+- Firebase storage is used as a file storage for images
+- RxJS used for reactive programming using Observables 
+- Write media queries CSS for Mobile, Tablet, and Desktop devices (... in progress)
 
 ### Author
 Vesela Videva - [https://videva.dev/](https://videva.dev/)
