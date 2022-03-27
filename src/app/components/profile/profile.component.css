@@ -8,15 +8,22 @@
 
 .profile-image {
   position: relative;
+  width: 8rem;
+  margin: auto;
 }
 
 .profile-image > button {
   position: absolute;
   bottom: 0;
-  right: 25%;
+  right: 0;
 }
 
 .mat-mini-fab.mat-accent {
   background-color: var(--color-accent);
   color: var(--color-white);
+}
+
+.profile-row {
+  display: flex;
+  flex-direction: column;
 }
