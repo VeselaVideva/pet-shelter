@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
 import { map } from "rxjs";
 import { Pet } from "../../models/pet.model";
+import { UsersService } from "../../services/users/users.service";
 
 @Component({
   selector: 'app-home',
@@ -11,12 +12,13 @@ import { Pet } from "../../models/pet.model";
 })
 export class HomeComponent implements OnInit {
 
-  user$ = this.authService.currentUser$;
+  user$ = this.usersService.currentUserProfile$;
   pets?: Pet[];
 
   constructor(
     private authService: AuthService,
-    private dbService: RealtimeDbService
+    private dbService: RealtimeDbService,
+    private usersService: UsersService
   ) { }
 
   ngOnInit(): void {
