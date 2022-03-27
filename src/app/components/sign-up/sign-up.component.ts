@@ -3,6 +3,8 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn,
 import { AuthService } from "../../services/auth/auth.service";
 import { Router } from "@angular/router";
 import { HotToastService } from "@ngneat/hot-toast";
+import { UsersService } from "../../services/users/users.service";
+import { switchMap } from "rxjs";
 
 export function passwordsMatchValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -33,7 +35,8 @@ export class SignUpComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private toast: HotToastService
+    private toast: HotToastService,
+    private usersService: UsersService
   ) { }
 
   ngOnInit(): void { }
@@ -48,8 +51,11 @@ export class SignUpComponent implements OnInit {
 
     const { name, email, password } = this.signUpForm.value;
 
-    this.authService.signup(name, email, password)
+    this.authService.signup(email, password)
       .pipe(
+        switchMap(({ user: { uid } }) => {
+          return this.usersService.addUser({ uid, email, displayName: name });
+        }),
         this.toast.observe({
           success: 'Congrats! You are signed up!',
           loading: 'Signing in...',
