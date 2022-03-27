@@ -17,6 +17,7 @@
 .content {
   padding: 2rem 1rem;
   height: calc(100% - 8rem);
+  min-height: calc(100vh - 8rem);
 }
 
 .content .mat-progress-spinner {

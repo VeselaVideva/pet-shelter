@@ -56,4 +56,8 @@ a:-webkit-any-link {
 .mat-progress-spinner circle, .mat-spinner circle {
   stroke: var(--color-accent);
   stroke-width: 5% !important;
-;}
+}
+
+.mat-menu-panel {
+  width: 9rem;
+}
