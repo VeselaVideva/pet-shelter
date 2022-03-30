@@ -18,11 +18,15 @@ Angular project for SoftUni's JS Web Developer learning path.
 - GitHub
 - GitHub Desktop
 
+### Useful information
+I'm deploying on a site with a custom name, not the default domain name that Firebase provides, so in every deploy the site name must be specified:`firebase deploy --only hosting:pet-shelter-angular`
+
 ### Public (guests)
 
 - page Home (click on logo) - shows all pets from the database
 - page Sign Up (Register) - added routh guard, so logged-in users can't access the page
 - page Sign In (Login) - added route guard, so logged-in users can't access the page
+- 404 page - when user enters an invalid url, he's redirected to this page
 
 ### Private (users)
 
