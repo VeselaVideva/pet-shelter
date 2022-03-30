@@ -33,6 +33,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AddPetComponent } from './components/add-pet/add-pet.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginComponent,
     SignUpComponent,
     AddPetComponent,
-    ProfileComponent
+    ProfileComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

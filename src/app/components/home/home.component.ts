@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
+import { UsersService } from "../../services/users/users.service";
+import { LoadingService } from "../../services/loading/loading.service";
 import { map } from "rxjs";
 import { Pet } from "../../models/pet.model";
-import { UsersService } from "../../services/users/users.service";
 
 @Component({
   selector: 'app-home',
@@ -13,12 +14,14 @@ import { UsersService } from "../../services/users/users.service";
 export class HomeComponent implements OnInit {
 
   user$ = this.usersService.currentUserProfile$;
+  loading$ = this.loader.loading$;
   pets?: Pet[];
 
   constructor(
     private authService: AuthService,
     private dbService: RealtimeDbService,
-    private usersService: UsersService
+    private usersService: UsersService,
+    public loader: LoadingService
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +29,7 @@ export class HomeComponent implements OnInit {
   }
 
   retrievePets(): void {
+    this.loader.show();
     this.dbService.getAll().snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
@@ -34,6 +38,7 @@ export class HomeComponent implements OnInit {
       )
     ).subscribe(data => {
       this.pets = data;
+      this.loader.hide();
       console.log(data);
     });
   }

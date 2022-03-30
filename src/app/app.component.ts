@@ -23,12 +23,12 @@ export class AppComponent {
     private usersService: UsersService
   ) { }
 
-  fetchData() {
+  /*fetchData() {
     this.http.get('https://api.github.com/users/veselavideva')
       .subscribe(res => {
         console.log(res);
       })
-  }
+  }*/
 
   logout() {
     this.authService.logout().subscribe(() => {

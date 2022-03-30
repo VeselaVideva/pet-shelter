@@ -2,9 +2,10 @@
   Welcome, {{ user.displayName }}!
 </h2>
 
-<div class="">
+<div class="home-container">
   <h4>Pets from DB</h4>
-  <div class="cards">
+
+  <div class="cards" *ngIf="pets">
     <mat-card class="card" *ngFor="let pet of pets">
       <mat-card-header>
         <img src="https://cdn-2.pedigreedatabase.com/pictures/1593748-22107.jpg" mat-card-avatar />
@@ -13,9 +14,8 @@
       </mat-card-header>
 
       <img mat-card-image
-           class="img-responsive"
+           class="img-responsive" alt=""
            src="https://cdn4.amcn.in/a/limited-edition-amstaff.alle.bg/assets/33687cde825f-c999999999/9ot3c3fjju.jpg"
-           alt=""
       >
       <mat-card-content>
         <p>{{ pet.description }}</p>
@@ -27,5 +27,9 @@
         <button mat-raised-button color="primary">Details</button>
       </mat-card-actions>
     </mat-card>
+  </div>
+
+  <div *ngIf="!pets">
+    <mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
   </div>
 </div>

@@ -1,3 +1,16 @@
+.home-container {
+  position: relative;
+  min-height: calc(100vh - 8rem);
+}
+
+.mat-progress-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
