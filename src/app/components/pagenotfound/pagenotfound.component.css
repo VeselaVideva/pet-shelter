@@ -1,0 +1,12 @@
+.pagenotfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 12rem);
+}
+
+.pagenotfound h1 {
+  font-size: 8rem;
+  line-height: 1;
+}
