@@ -5,6 +5,7 @@ import { UsersService } from "../../services/users/users.service";
 import { LoadingService } from "../../services/loading/loading.service";
 import { ActivatedRoute } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
+import { dbPath } from "../../../environments/environment";
 
 @Component({
   selector: 'app-details',
@@ -46,7 +47,7 @@ export class DetailsComponent implements OnInit {
   }
 
   retrievePet(key: string): void {
-    this.http.get(`https://pet-shelter-e3a18-default-rtdb.europe-west1.firebasedatabase.app/pets/${key}.json`)
+    this.http.get(dbPath + `/${key}.json`)
       .subscribe(res => {
         this.pet = res;
       })

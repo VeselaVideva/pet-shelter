@@ -16,6 +16,8 @@ export const environment = {
   production: false
 };
 
+export const dbPath = 'https://pet-shelter-e3a18-default-rtdb.europe-west1.firebasedatabase.app/pets';
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
