@@ -12,7 +12,7 @@ export function passwordsMatchValidator(): ValidatorFn {
     const confirmPassword = control.get('confirmPassword')?.value;
 
     if (password && confirmPassword && password !== confirmPassword) {
-      return { passwordsDontMatch: true  }
+      return { passwordsDontMatch: true }
     }
     return null;
   };
@@ -28,7 +28,7 @@ export class SignUpComponent implements OnInit {
   signUpForm = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', Validators.required),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     confirmPassword: new FormControl('', Validators.required)
   }, { validators: passwordsMatchValidator() });
 
