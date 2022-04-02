@@ -16,6 +16,7 @@ export class AddPetComponent implements OnInit {
   createForm = new FormGroup({
     name: new FormControl('', Validators.required),
     age: new FormControl('', Validators.required),
+    breed: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required)
   });
 
@@ -26,6 +27,8 @@ export class AddPetComponent implements OnInit {
   get name() { return this.createForm.get('name'); }
 
   get age() { return this.createForm.get('age'); }
+
+  get breed() { return this.createForm.get('breed'); }
 
   get description() { return this.createForm.get('description'); }
 

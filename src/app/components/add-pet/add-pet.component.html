@@ -9,14 +9,17 @@
         <input formControlName="age" matInput placeholder="Age" type="number">
       </mat-form-field>
       <mat-form-field>
+        <input formControlName="breed" matInput placeholder="Breed" type="text">
+      </mat-form-field>
+      <mat-form-field>
         <input formControlName="description" matInput placeholder="Description" type="text">
       </mat-form-field>
-      <button color="primary" mat-raised-button type="submit">Submit</button>
+      <button color="primary" mat-raised-button type="submit"><mat-icon>pets</mat-icon>Add pet</button>
     </div>
     <div *ngIf="submitted">
       <h6 class="center">You've added this pet successfully!</h6>
       <button (click)="newPet(); addForm.resetForm()" color="primary" mat-raised-button>
-        Add new pet
+        Add another one
       </button>
     </div>
   </form>
