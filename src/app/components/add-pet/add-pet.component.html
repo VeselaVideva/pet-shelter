@@ -4,15 +4,22 @@
       <h2>Add new pet</h2>
       <mat-form-field>
         <input formControlName="name" matInput placeholder="Name" type="text">
+        <mat-error *ngIf="name?.errors?.['required']">Name is required!</mat-error>
+        <mat-error *ngIf="name?.errors">Name should be at least 2 characters!</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input formControlName="age" matInput placeholder="Age" type="number">
+        <mat-error *ngIf="age?.errors?.['required']">Age is required!</mat-error>
+        <mat-error *ngIf="age?.errors">Age cannot be a negative number!</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input formControlName="breed" matInput placeholder="Breed" type="text">
+        <mat-error *ngIf="breed?.errors?.['required']">Breed is required!</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input formControlName="description" matInput placeholder="Description" type="text">
+        <mat-error *ngIf="description?.errors?.['required']">Description is required!</mat-error>
+        <mat-error *ngIf="description?.errors">Description should be at least 50 characters!</mat-error>
       </mat-form-field>
       <button color="primary" mat-raised-button type="submit"><mat-icon>pets</mat-icon>Add pet</button>
     </div>

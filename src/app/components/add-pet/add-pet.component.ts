@@ -14,10 +14,10 @@ export class AddPetComponent implements OnInit {
   submitted = false;
 
   createForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    age: new FormControl('', Validators.required),
+    name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    age: new FormControl('', [Validators.required, Validators.min(0)]),
     breed: new FormControl('', Validators.required),
-    description: new FormControl('', Validators.required)
+    description: new FormControl('', [Validators.required, Validators.minLength(50)])
   });
 
   constructor(private petService: RealtimeDbService) { }
