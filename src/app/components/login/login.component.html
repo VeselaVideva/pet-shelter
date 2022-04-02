@@ -10,6 +10,8 @@
       <mat-error *ngIf="password?.errors?.['required']">Password is required!</mat-error>
     </mat-form-field>
     <button color="primary" mat-raised-button type="submit">Login</button>
-    <span class="new">New to our platform? <a routerLink="/sign-up">Sign Up</a></span>
+    <span class="new">New to our platform?
+      <a class="switch" routerLink="/sign-up"><mat-icon>person</mat-icon>Sign Up</a>
+    </span>
   </form>
 </div>

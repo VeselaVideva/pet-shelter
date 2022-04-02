@@ -19,6 +19,8 @@
     </mat-form-field>
     <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">Passwords should match!</mat-error>
     <button color="primary" mat-raised-button type="submit">Sign Up</button>
-    <span class="new">Already have an account? <a routerLink="/login">Login</a></span>
+    <span class="new">Already have an account?
+      <a class="switch" routerLink="/login"><mat-icon>login</mat-icon>Login</a>
+    </span>
   </form>
 </div>
