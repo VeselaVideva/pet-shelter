@@ -6,7 +6,7 @@ import {
   signInWithEmailAndPassword,
   updateProfile
 } from "@angular/fire/auth";
-import { concatMap, from, Observable, of, switchMap } from "rxjs";
+import { concatMap, from, Observable, of } from "rxjs";
 import firebase from "firebase/compat";
 import UserInfo = firebase.UserInfo;
 
@@ -34,7 +34,6 @@ export class AuthService {
     return of(user).pipe(
       concatMap(user => {
         if (!user) throw new Error('Not authenticated!');
-
         return updateProfile(user, profileData);
       })
     )
