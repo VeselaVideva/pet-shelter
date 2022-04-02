@@ -39,7 +39,6 @@ export class HomeComponent implements OnInit {
     ).subscribe(data => {
       this.pets = data;
       this.loader.hide();
-      console.log(data);
     });
   }
 }

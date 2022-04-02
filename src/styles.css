@@ -61,3 +61,42 @@ a:-webkit-any-link {
 .mat-menu-panel {
   width: 9rem;
 }
+
+.mat-card-subtitle,
+.lighter-text {
+  color: var(--color-text);
+  opacity: .7;
+}
+
+.lighter-text {
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.mat-card {
+  background-color: var(--color-lightgray);
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: var(--color-steelblue);
+}
+
+.mat-flat-button.mat-accent,
+.mat-raised-button.mat-accent,
+.mat-fab.mat-accent,
+.mat-mini-fab.mat-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.mat-button.mat-accent,
+.mat-icon-button.mat-accent,
+.mat-stroked-button.mat-accent {
+  color: var(--color-accent);
+}

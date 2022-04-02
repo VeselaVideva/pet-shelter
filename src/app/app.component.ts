@@ -24,7 +24,7 @@ export class AppComponent {
   ) { }
 
   /*fetchData() {
-    this.http.get('https://api.github.com/users/veselavideva')
+    this.http.get('https://pet-shelter-e3a18-default-rtdb.europe-west1.firebasedatabase.app/pets.json')
       .subscribe(res => {
         console.log(res);
       })

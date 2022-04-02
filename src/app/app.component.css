@@ -14,6 +14,10 @@
   margin-right: .25rem;
 }
 
+.mat-menu-item .mat-icon {
+  margin-right: .25rem;
+}
+
 .content {
   padding: 2rem 1rem;
   height: calc(100% - 8rem);

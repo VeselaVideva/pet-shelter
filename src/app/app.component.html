@@ -9,7 +9,7 @@
         alt=""
       />
       {{ user.displayName }}
-      <mat-icon>expand_more</mat-icon>
+      <mat-icon>more_vert</mat-icon>
     </button>
   </ng-container>
 
@@ -23,9 +23,18 @@
 </mat-toolbar>
 
 <mat-menu #userMenu="matMenu">
-  <button mat-menu-item routerLink="/profile">Profile</button>
-  <button mat-menu-item routerLink="/add-pet">Add pet</button>
-  <button mat-menu-item (click)="logout()">Logout</button>
+  <button mat-menu-item routerLink="/profile">
+    <mat-icon>person</mat-icon>
+    Profile
+  </button>
+  <button mat-menu-item routerLink="/add-pet">
+    <mat-icon>pets</mat-icon>
+    Add pet
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    Logout
+  </button>
 </mat-menu>
 
 <main class="content">
@@ -35,4 +44,5 @@
 
 <footer class="footer">
   <span>2022 &copy; Pet Shelter</span>
+  <!--<button mat-raised-button color="accent" (click)="fetchData()">Fetch data</button>-->
 </footer>

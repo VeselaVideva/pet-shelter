@@ -3,14 +3,16 @@
 </h2>
 
 <div class="home-container">
-  <h4>Pets from DB</h4>
+  <h4>Pets for adoption</h4>
 
   <div class="cards" *ngIf="pets">
     <mat-card class="card" *ngFor="let pet of pets">
       <mat-card-header>
         <img src="https://cdn-2.pedigreedatabase.com/pictures/1593748-22107.jpg" mat-card-avatar />
         <mat-card-title>{{ pet.name }}</mat-card-title>
-        <mat-card-subtitle>Age: {{ pet.age }}</mat-card-subtitle>
+        <mat-card-subtitle>
+          Age: <span class="bold">{{ pet.age }}</span>
+        </mat-card-subtitle>
       </mat-card-header>
 
       <img mat-card-image
@@ -18,13 +20,14 @@
            src="https://cdn4.amcn.in/a/limited-edition-amstaff.alle.bg/assets/33687cde825f-c999999999/9ot3c3fjju.jpg"
       >
       <mat-card-content>
-        <p>{{ pet.description }}</p>
+        <p><span class="lighter-text">Breed:</span> {{ pet.breed }}</p>
+        <p><span class="lighter-text">Description:</span> {{ pet.description }}</p>
       </mat-card-content>
 
       <mat-card-actions>
-        <button mat-raised-button color="accent">Like</button>
-        <button mat-raised-button color="accent">Share</button>
-        <button mat-raised-button color="primary">Details</button>
+        <button mat-icon-button color="warn"><mat-icon>favorite</mat-icon></button>
+        <button mat-icon-button color="accent"><mat-icon>share</mat-icon></button>
+        <button mat-icon-button color="primary" routerLink="/details/{{pet.key}}"><mat-icon>open_in_new</mat-icon></button>
       </mat-card-actions>
     </mat-card>
   </div>
