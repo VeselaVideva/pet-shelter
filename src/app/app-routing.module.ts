@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AddPetComponent } from "./components/add-pet/add-pet.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { PagenotfoundComponent } from "./components/pagenotfound/pagenotfound.component";
+import { DetailsComponent } from "./components/details/details.component";
 
 const redirectToLogin = () => redirectUnauthorizedTo(['/login']);
 const redirectToHome = () => redirectLoggedInTo(['/home']);
@@ -42,6 +43,10 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     ...canActivate(redirectToLogin)
+  },
+  {
+    path: 'details/:key',
+    component: DetailsComponent,
   },
   {
     path: '**',

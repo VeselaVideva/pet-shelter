@@ -1,0 +1,33 @@
+<div class="details-container">
+
+  <div class="cards">
+    <mat-card class="card">
+      <mat-card-header>
+        <img src="https://cdn-2.pedigreedatabase.com/pictures/1593748-22107.jpg" mat-card-avatar />
+        <mat-card-title>{{ pet?.name }}</mat-card-title>
+        <mat-card-subtitle>
+          Age: <span class="bold">{{ pet?.age }}</span>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <div class="flex-content">
+        <img mat-card-image class="img-responsive" alt=""
+             src="https://cdn4.amcn.in/a/limited-edition-amstaff.alle.bg/assets/33687cde825f-c999999999/9ot3c3fjju.jpg">
+
+        <div class="flex-column">
+          <mat-card-content>
+            <p><span class="lighter-text">Breed:</span> {{ pet?.breed }}</p>
+            <p><span class="lighter-text">Description:</span> {{ pet?.description }}</p>
+          </mat-card-content>
+
+          <mat-card-actions *ngIf="user$ | async as user">
+            <button mat-icon-button color="accent" routerLink="/edit/{{pet?.key}}"><mat-icon>edit</mat-icon></button>
+            <button mat-icon-button color="warn" routerLink="/delete/{{pet?.key}}"><mat-icon>delete</mat-icon></button>
+          </mat-card-actions>
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+
+</div>

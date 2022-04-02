@@ -34,6 +34,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AddPetComponent } from './components/add-pet/add-pet.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     SignUpComponent,
     AddPetComponent,
     ProfileComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
