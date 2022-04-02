@@ -104,3 +104,10 @@ a:-webkit-any-link {
 .mat-form-field:not(.mat-form-field-invalid):not(.ng-untouched) .mat-form-field-label-wrapper {
   border-right: .125rem solid green;
 }
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

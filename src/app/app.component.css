@@ -14,6 +14,10 @@
   margin-right: .25rem;
 }
 
+.header button.user-menu {
+  padding-right: 0;
+}
+
 .mat-menu-item .mat-icon {
   margin-right: .25rem;
 }
@@ -35,8 +39,42 @@
 .footer {
   height: 4rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--color-steelblue);
   color: var(--color-white);
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.footer .copyright {
+  font-weight: 300;
+  font-size: .875rem;
+}
+
+.footer .copyright a {
+  color: var(--color-white);
+  transition: color 300ms ease-in-out;
+}
+
+.footer .copyright a:hover {
+  color: var(--color-accent);
+}
+
+@media screen and (min-width: 768px) {
+  .footer .copyright {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .content {
+    padding: 3rem 4rem 2rem;
+  }
 }

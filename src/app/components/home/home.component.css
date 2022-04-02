@@ -66,3 +66,9 @@
     max-width: calc(33.333% - 1.5rem);
   }
 }
+
+@media screen and (min-width: 1400px) {
+  .mat-card {
+    max-width: calc(25% - 1.5rem);
+  }
+}
