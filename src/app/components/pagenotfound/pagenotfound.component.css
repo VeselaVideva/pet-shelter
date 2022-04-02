@@ -10,3 +10,8 @@
   font-size: 8rem;
   line-height: 1;
 }
+
+.pagenotfound button .mat-icon {
+  height: 26px;
+  font-size: 1.25rem;
+}
