@@ -100,3 +100,7 @@ a:-webkit-any-link {
 .mat-stroked-button.mat-accent {
   color: var(--color-accent);
 }
+
+.mat-form-field:not(.mat-form-field-invalid):not(.ng-untouched) .mat-form-field-label-wrapper {
+  border-right: .125rem solid green;
+}
