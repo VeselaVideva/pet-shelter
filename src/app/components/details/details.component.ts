@@ -53,7 +53,7 @@ export class DetailsComponent implements OnInit {
       })
   }
 
-  updatePet(): void {
+  updatePet(): void { // TODO
     const data = {
       name: this.currentPet.name,
       age: this.currentPet.age,
@@ -67,7 +67,7 @@ export class DetailsComponent implements OnInit {
     }
   }
 
-  deletePet(): void {
+  deletePet(): void { // TODO
     if (this.currentPet.key) {
       this.dbService.delete(this.currentPet.key)
         .then(() => {
