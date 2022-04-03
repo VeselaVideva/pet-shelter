@@ -90,6 +90,11 @@ hr {
   background-color: var(--color-lightgray);
 }
 
+.gradient-border {
+  padding: .2rem;
+  background: linear-gradient(130deg, var(--color-steelblue), var(--color-accent), var(--color-steelblue));
+}
+
 .mat-flat-button.mat-primary,
 .mat-raised-button.mat-primary,
 .mat-fab.mat-primary,
