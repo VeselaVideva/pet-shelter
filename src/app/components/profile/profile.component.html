@@ -33,4 +33,15 @@
     </mat-form-field>
     <button color="primary" mat-raised-button type="submit"><mat-icon>save</mat-icon>Save</button>
   </form>
+  <hr>
+  <h4 class="left">Location Info</h4>
+  <div class="profile-row">
+    <p><span class="lighter">IP address:</span> {{ userIP }}</p>
+    <p><span class="lighter">Country:</span> {{ countryName | uppercase }}</p>
+    <p><span class="lighter">City:</span> {{ cityName }}</p>
+  </div>
+  <div class="profile-row">
+    <p><span class="lighter">Latitude :</span> {{ latitude }}</p>
+    <p><span class="lighter">Longitude :</span> {{ longitude }}</p>
+  </div>
 </div>

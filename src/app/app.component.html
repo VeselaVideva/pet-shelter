@@ -1,3 +1,24 @@
+<div class="secondary-header">
+  <span class="lighter-text date">Date: {{ date$ }}</span>
+  <span class="separator">|</span>
+  <span class="lighter-text time">Time: {{ time$ }}</span>
+  <div class="row show-ip" *ngIf="user$ | async as user">
+    <span class="separator hide-mobile">|</span>
+    <span class="lighter-text ip">
+      {{ user.displayName }}'s IP: {{ userIP }}
+    </span>
+    <span class="separator">|</span>
+    <span class="flag">
+      <img class="img-responsive"
+        [src]="flag"
+        [alt]="countryName"
+      >
+    </span>
+    <span class="lighter-text ip">
+      {{ countryName | uppercase }}
+    </span>
+  </div>
+</div>
 <mat-toolbar class="header">
   <span routerLink="/">{{ title }}</span>
 

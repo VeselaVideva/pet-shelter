@@ -1,6 +1,6 @@
 .home-container {
   position: relative;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100% - 11rem);
 }
 
 .mat-progress-spinner {

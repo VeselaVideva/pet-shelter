@@ -38,9 +38,11 @@ I'm deploying on a site with a custom name, not the default domain name that Fir
 ### Bonuses
 
 - App is deployed with Firebase hosting
-- Firebase storage is used as a file storage for images
-- RxJS used for reactive programming using Observables 
-- Write media queries CSS for Mobile, Tablet, and Desktop devices (... in progress)
+- Firebase storage is used as a file storage for user profile photos
+- RxJS used for reactive programming using Observables
+- Used 3rd party API for getting user's IP address - [https://jsonip.com/](https://getjsonip.com/#docs)
+- Used 3rd party API for getting user's geolocation information - [https://app.ipgeolocation.io/](https://app.ipgeolocation.io/)
+- Write media queries CSS for Mobile, Tablet, and Desktop devices
 
 ### Author
 Vesela Videva - [https://videva.dev/](https://videva.dev/)

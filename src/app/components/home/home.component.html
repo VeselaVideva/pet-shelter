@@ -1,9 +1,9 @@
-<h2 class="center" *ngIf="user$ | async as user">
+<h2 *ngIf="user$ | async as user">
   Welcome, {{ user.displayName }}!
 </h2>
 
 <div class="home-container">
-  <h4>Pets for adoption</h4>
+  <h4 class="center">Pets for adoption</h4>
 
   <div class="cards" *ngIf="pets">
     <mat-card class="card" *ngFor="let pet of pets">

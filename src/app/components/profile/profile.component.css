@@ -26,6 +26,12 @@
 .profile-row {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-row .lighter {
+  color: var(--color-text);
+  opacity: .7;
 }
 
 .form-container form {
