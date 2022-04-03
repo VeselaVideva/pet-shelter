@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
@@ -75,7 +76,7 @@ import { DetailsComponent } from './components/details/details.component';
     provide: HTTP_INTERCEPTORS,
     useClass: NetworkInterceptor,
     multi: true
-  }],
+  }, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

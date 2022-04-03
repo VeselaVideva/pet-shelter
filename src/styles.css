@@ -39,12 +39,22 @@ a:-webkit-any-link {
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 .mat-error {
   font-size: .75rem;
 }
 
 .img-responsive {
   max-width: 100%;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--color-darkgray);
+  margin: 1.5rem 0;
 }
 
 .mat-progress-spinner,
