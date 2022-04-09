@@ -4,4 +4,6 @@ export class Pet {
   age?: number;
   breed?: string;
   description?: string;
+  photoURL?: string;
+  fosterer?: string;
 }
