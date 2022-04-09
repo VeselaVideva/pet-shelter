@@ -31,7 +31,7 @@ I'm deploying on a site with a custom name, not the default domain name that Fir
 ### Private (users)
 
 - page Add pet - added route guard, so only logged-in users can access the page
-- **TODO:** Edit & Delete buttons (visible only for users which have added the pet to the database)
+- Edit & Delete buttons (visible only for users which have added the pet to the database (foster home providers))
 - page Profile (each user has a profile page... **TODO:** which shows a list with his animals added for adoption)
 - Logout button in the header user menu is visible only to logged-in users
 
