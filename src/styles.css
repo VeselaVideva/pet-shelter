@@ -116,6 +116,12 @@ hr {
   color: var(--color-accent);
 }
 
+.mat-button.mat-primary,
+.mat-icon-button.mat-primary,
+.mat-stroked-button.mat-primary {
+  color: var(--color-steelblue);
+}
+
 .mat-form-field:not(.mat-form-field-invalid):not(.ng-untouched) .mat-form-field-label-wrapper {
   border-right: .125rem solid green;
 }
