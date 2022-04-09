@@ -22,6 +22,7 @@ export class DetailsComponent implements OnInit {
   @Output() refreshList: EventEmitter<any> = new EventEmitter();
 
   currentPet: Pet = {
+    photoURL: 'string',
     name: 'string',
     age: 0,
     breed: 'string',
@@ -55,6 +56,7 @@ export class DetailsComponent implements OnInit {
 
   updatePet(): void { // TODO
     const data = {
+      photoURL: this.currentPet.photoURL,
       name: this.currentPet.name,
       age: this.currentPet.age,
       description: this.currentPet.description
