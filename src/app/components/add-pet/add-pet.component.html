@@ -5,7 +5,7 @@
       <mat-form-field>
         <input formControlName="photoURL" matInput placeholder="Photo URL" type="text">
         <mat-error *ngIf="photoURL?.errors?.['required']">Photo URL is required!</mat-error>
-        <mat-error *ngIf="name?.errors">Photo URL should start with http or https!</mat-error>
+        <mat-error *ngIf="photoURL?.errors">Photo URL should start with http or https!</mat-error>
       </mat-form-field>
       <mat-form-field>
         <input formControlName="name" matInput placeholder="Name" type="text">

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Pet } from "../../models/pet.model";
 import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { UsersService } from "../../services/users/users.service";
 
 
@@ -30,24 +30,19 @@ export class AddPetComponent implements OnInit {
     private usersService: UsersService
   ) { }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void { }
 
   get photoURL() { return this.createForm.get('photoURL'); }
-
   get name() { return this.createForm.get('name'); }
-
   get age() { return this.createForm.get('age'); }
-
   get breed() { return this.createForm.get('breed'); }
-
   get description() { return this.createForm.get('description'); }
-
   get fosterer() { return this.createForm.get('fosterer'); }
 
   submit() {
     if (!this.createForm.valid) { return; }
 
-    this.pet = this.createForm.value;
+    this.pet = this.createForm.value; //console.log(this.pet);
 
     this.petService.create(this.pet).then(() => {
       console.log('Added new pet successfully!');
