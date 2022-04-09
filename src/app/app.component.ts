@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 import { UsersService } from './services/users/users.service';
 import { DatePipe } from "@angular/common";
 import { switchMap } from "rxjs";
-import { APIkey, geoAPIKey } from "../environments/environment";
+import { APIkey } from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -35,11 +35,11 @@ export class AppComponent {
   ) { }
 
   ngOnInit(): void {
-    this.loadIP();
+    //this.loadIP();
     this.getIP();
   }
 
-  loadIP() {
+  /*loadIP() {
     this.http.get('https://jsonip.com').pipe(
         switchMap((value: any) => {
           this.userIP = value.ip;
@@ -55,7 +55,7 @@ export class AppComponent {
         console.log(err);
       }
     );
-  }
+  }*/
 
   getIP() {
     this.http.get('https://jsonip.com').pipe(

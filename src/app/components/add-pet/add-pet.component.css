@@ -12,6 +12,7 @@ button[type="submit"] .mat-icon {
   font-size: 1.25rem;
 }
 
+
 /* MEDIA QUERIES CSS */
 @media screen and (min-width: 768px) {
   .form-container {
@@ -22,6 +23,12 @@ button[type="submit"] .mat-icon {
   .form-container form button {
     width: 10rem;
     align-self: center;
+  }
+
+  .flex-btns {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }
 
