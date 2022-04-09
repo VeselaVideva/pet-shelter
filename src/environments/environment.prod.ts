@@ -11,3 +11,12 @@ export const environment = {
   },
   production: true
 };
+
+export const dbPath = 'https://pet-shelter-e3a18-default-rtdb.europe-west1.firebasedatabase.app/pets';
+
+// https://ipstack.com/ - $9.99 / month for 50K requests
+export const geoAPIKey = '9743c862ea93aeb2687d89a2dd29baba';
+
+// https://app.ipgeolocation.io/ - Free up to 30K requests / month
+// CHECK API USAGE BEFORE EXAM !!!
+export const APIkey = '933ebedd005240018f017552cfee965d';
