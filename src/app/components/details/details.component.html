@@ -14,7 +14,6 @@
         <img mat-card-image class="img-responsive gradient-border" alt=""
              [src]="pet?.photoURL ?? 'assets/images/pet_placeholder.png'"
         />
-
         <div class="flex-column">
           <mat-card-content>
             <p><span class="lighter-text">Breed:</span> {{ pet?.breed }}</p>
@@ -24,10 +23,34 @@
             </p>
           </mat-card-content>
 
+          <div *ngIf="editActive" class="edit-form">
+            <hr>
+            <h5 class="center">Update pet info</h5>
+            <form #editForm="ngForm" (ngSubmit)="updatePet()" [formGroup]="createForm">
+              <mat-form-field>
+                <input formControlName="photoURL" matInput placeholder="Photo URL" value="`${pet?.photoURL}`" type="text">
+                <mat-error *ngIf="photoURL?.errors?.['required']">Photo URL is required!</mat-error>
+                <mat-error *ngIf="photoURL?.errors">Photo URL should start with http or https!</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input formControlName="age" matInput placeholder="Age" type="number">
+                <mat-error *ngIf="age?.errors?.['required']">Age is required!</mat-error>
+                <mat-error *ngIf="age?.errors">Age cannot be a negative number!</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input formControlName="description" matInput placeholder="Description" type="text">
+                <mat-error *ngIf="description?.errors?.['required']">Description is required!</mat-error>
+                <mat-error *ngIf="description?.errors">Description should be at least 50 characters!</mat-error>
+              </mat-form-field>
+              <button color="primary" mat-raised-button type="submit">Update pet info</button>
+            </form>
+            <button mat-button color="primary" (click)="hideEditForm()">Hide edit form</button>
+          </div>
+
           <mat-card-actions *ngIf="user$ | async as user">
             <span *ngIf="user?.email === pet?.fosterer">
-              <button mat-icon-button color="accent" routerLink="/edit/{{pet?.key}}"><mat-icon>edit</mat-icon></button>
-              <button mat-icon-button color="warn" routerLink="/delete/{{pet?.key}}"><mat-icon>delete</mat-icon></button>
+              <button mat-icon-button color="accent" (click)="showEditForm()"><mat-icon>edit</mat-icon></button>
+              <button mat-icon-button color="warn" (click)="deletePet()"><mat-icon>delete</mat-icon></button>
             </span>
           </mat-card-actions>
         </div>

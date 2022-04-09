@@ -40,6 +40,12 @@
   height: 26px;
 }
 
+.edit-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* MEDIA QUERIES CSS */
 @media screen and (min-width: 768px) {
   .flex-content {
@@ -54,5 +60,55 @@
   .mat-card-image {
     margin: 1rem 2rem .2rem 0 !important;
     max-width: 50%;
+  }
+
+  .details-container {
+    position: relative;
+    height: calc(100vh - 11rem);
+  }
+
+  .edit-form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -50%;
+  }
+
+  .edit-form form {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .edit-form hr {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .edit-form {
+    bottom: -40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .edit-form {
+    position: unset;
+  }
+
+  .mat-form-field {
+    width: calc(50% - 1rem);
+  }
+
+  .edit-form hr {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .mat-form-field {
+    width: calc(50% - 2rem);
   }
 }
