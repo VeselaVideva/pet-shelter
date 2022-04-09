@@ -1,7 +1,12 @@
-<div class="form-container mat-elevation-z1">
+<div class="form-container mat-elevation-z1" *ngIf="user$ | async as user">
   <form #addForm="ngForm" (ngSubmit)="submit()" [formGroup]="createForm">
     <div *ngIf="!submitted">
-      <h2>Add new pet</h2>
+      <h2 class="center">Add new pet</h2>
+      <mat-form-field>
+        <input formControlName="photoURL" matInput placeholder="Photo URL" type="text">
+        <mat-error *ngIf="photoURL?.errors?.['required']">Photo URL is required!</mat-error>
+        <mat-error *ngIf="name?.errors">Photo URL should start with http or https!</mat-error>
+      </mat-form-field>
       <mat-form-field>
         <input formControlName="name" matInput placeholder="Name" type="text">
         <mat-error *ngIf="name?.errors?.['required']">Name is required!</mat-error>
@@ -21,13 +26,23 @@
         <mat-error *ngIf="description?.errors?.['required']">Description is required!</mat-error>
         <mat-error *ngIf="description?.errors">Description should be at least 50 characters!</mat-error>
       </mat-form-field>
+      <mat-form-field>
+        <input formControlName="fosterer" matInput placeholder="Fosterer email" defaultValue="{{user?.email}}" type="text">
+        <mat-error *ngIf="fosterer?.errors?.['required']">Fosterer email is required!</mat-error>
+      </mat-form-field>
       <button color="primary" mat-raised-button type="submit"><mat-icon>pets</mat-icon>Add pet</button>
     </div>
     <div *ngIf="submitted">
       <h6 class="center">You've added this pet successfully!</h6>
-      <button (click)="newPet(); addForm.resetForm()" color="primary" mat-raised-button>
-        Add another one
-      </button>
+      <div class="flex-btns">
+        <button (click)="newPet(); addForm.resetForm()" color="primary" mat-raised-button>
+          Add another one
+        </button>
+        <span class="center">or</span>
+        <button routerLink="/home" color="primary" mat-raised-button>
+          Browse all pets
+        </button>
+      </div>
     </div>
   </form>
 </div>

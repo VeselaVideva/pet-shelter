@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Pet } from "../../models/pet.model";
 import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { UsersService } from "../../services/users/users.service";
+
 
 @Component({
   selector: 'app-add-pet',
@@ -10,19 +12,27 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 })
 export class AddPetComponent implements OnInit {
 
+  user$ = this.usersService.currentUserProfile$;
   pet: Pet = new Pet();
   submitted = false;
 
   createForm = new FormGroup({
+    photoURL: new FormControl('', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]),
     name: new FormControl('', [Validators.required, Validators.minLength(2)]),
     age: new FormControl('', [Validators.required, Validators.min(0)]),
     breed: new FormControl('', Validators.required),
-    description: new FormControl('', [Validators.required, Validators.minLength(50)])
+    description: new FormControl('', [Validators.required, Validators.minLength(50)]),
+    fosterer: new FormControl('', Validators.required)
   });
 
-  constructor(private petService: RealtimeDbService) { }
+  constructor(
+    private petService: RealtimeDbService,
+    private usersService: UsersService
+  ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {  }
+
+  get photoURL() { return this.createForm.get('photoURL'); }
 
   get name() { return this.createForm.get('name'); }
 
@@ -31,6 +41,8 @@ export class AddPetComponent implements OnInit {
   get breed() { return this.createForm.get('breed'); }
 
   get description() { return this.createForm.get('description'); }
+
+  get fosterer() { return this.createForm.get('fosterer'); }
 
   submit() {
     if (!this.createForm.valid) { return; }
