@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { HttpClient } from "@angular/common/http";
 import { AuthService } from "../../services/auth/auth.service";
 import { ImageUploadService } from "../../services/upload/image-upload.service";
 import { HotToastService } from "@ngneat/hot-toast";
-import { concatMap, switchMap } from "rxjs";
-import { FormControl, FormGroup } from '@angular/forms';
 import { UsersService } from "../../services/users/users.service";
+import { concatMap, switchMap } from "rxjs";
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
 import { UserProfile } from "../../models/user-profile";
-import { APIkey, geoAPIKey } from "../../../environments/environment";
-import { HttpClient } from "@angular/common/http";
+import { APIkey, dbPath } from "../../../environments/environment";
+
 
 @UntilDestroy()
 @Component({
@@ -27,6 +28,8 @@ export class ProfileComponent implements OnInit {
   cityName = ''; // userLocationInfo?.capital
   latitude = ''; // userIPInfo?.latitude
   longitude = ''; // userIPInfo?.longitude
+
+  pets?: any = [];
 
   profileForm = new FormGroup({
     uid: new FormControl(''),
@@ -51,7 +54,7 @@ export class ProfileComponent implements OnInit {
       .subscribe((user) => {
       this.profileForm.patchValue({ ...user });
     })
-    this.loadIP();
+    //this.loadIP();
     this.getIP();
   }
 
@@ -81,7 +84,7 @@ export class ProfileComponent implements OnInit {
       ).subscribe();
   }
 
-  loadIP() {
+  /*loadIP() {
     this.http.get('https://jsonip.com').pipe(
       switchMap((value: any) => {
         this.userIP = value.ip;
@@ -95,7 +98,7 @@ export class ProfileComponent implements OnInit {
         console.log(err);
       }
     );
-  }
+  }*/
 
   getIP() {
     this.http.get('https://jsonip.com').pipe(
@@ -115,5 +118,16 @@ export class ProfileComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  retrieveUserPets(email: any): void {
+    this.http.get(dbPath + `.json`)
+      .subscribe(res => {
+        res = Object.entries(res).filter(function ([key, value]) {
+            return value.fosterer === email ;
+          }
+        );
+        this.pets = res;
+      })
   }
 }

@@ -44,6 +44,59 @@ button[type="submit"] .mat-icon {
   font-size: 1.25rem;
 }
 
+.user-pets .mat-icon {
+  height: 22px;
+  margin-left: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.user-pets .show-pets-btn {
+  margin: 1rem 0 0;
+}
+
+.user-pets .cards {
+  margin-top: 1.5rem;
+}
+
+.mat-card {
+  background-color: var(--color-white);
+  margin-top: 1rem;
+}
+
+.mat-card-header {
+  text-align: left;
+}
+
+.mat-card-avatar {
+  width: 60px;
+  height: 60px;
+}
+
+.mat-card-header .mat-card-subtitle:not(:first-child) {
+  margin-top: 0;
+}
+
+.mat-card-subtitle {
+  margin-bottom: 0;
+}
+
+.mat-card-header-text {
+  width: 100%;
+}
+
+.mat-card-actions {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: flex-end;
+}
+
 
 /* MEDIA QUERIES CSS */
 @media screen and (min-width: 768px) {
@@ -55,10 +108,6 @@ button[type="submit"] .mat-icon {
   .profile-row {
     flex-direction: row;
     gap: 2rem;
-  }
-
-  .mat-form-field {
-    width: 100%;
   }
 
   .form-container form button {

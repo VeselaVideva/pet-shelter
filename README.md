@@ -33,7 +33,7 @@ I'm deploying on a site with a custom name, not the default domain name that Fir
 - page Add pet - added route guard, so only logged-in users can access the page, added data validation and error handling (2nd dynamic page)
 - page Details - each pet card has a button for reaching the Details page which contains more information about the pet. In this page the fosterer of the animal (the user who added the animal to the database) dan update pet's photo, age and description, or to delete the pet from the database. (3rd dynamic page)
 - Edit & Delete buttons on Details page - visible only for users which have added the pet to the database (foster home providers)
-- page Profile - each user has a profile page which is editable - user can add his profile photo, can update it and also can update his user data, all data is stored in Firestore collections (4th dynamic page)
+- page Profile - each user has a profile page which is editable - user can add his profile photo, can update it and also can update his user data, all data is stored in Firestore collections (4th dynamic page), each user has a list of his fostered pets on his profile page
 - Logout button in the header user menu is visible only to logged-in users
 
 ### Bonuses

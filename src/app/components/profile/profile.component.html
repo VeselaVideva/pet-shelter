@@ -44,4 +44,27 @@
     <p><span class="lighter">Latitude :</span> {{ latitude }}</p>
     <p><span class="lighter">Longitude :</span> {{ longitude }}</p>
   </div>
+  <hr>
+  <div class="user-pets" *ngIf="user?.email">
+    <button class="show-pets-btn" mat-raised-button color="primary" (click)="retrieveUserPets(user?.email)">
+      Show {{user?.displayName}}'s fostered pets<mat-icon>pets</mat-icon>
+    </button>
+
+    <div class="cards" *ngIf="pets">
+      <mat-card class="card" *ngFor="let pet of pets">
+        <mat-card-header>
+          <img mat-card-avatar [src]="pet[1].photoURL ?? 'assets/images/pet_placeholder.png'"/>
+          <mat-card-title>{{ pet[1].name }}</mat-card-title>
+          <mat-card-subtitle>
+            Age: <span class="bold">{{ pet[1].age }}</span>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <button mat-icon-button color="accent"><mat-icon>share</mat-icon></button>
+          <button mat-icon-button color="primary" routerLink="/details/{{pet[0]}}"><mat-icon>open_in_new</mat-icon></button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
 </div>
