@@ -23,16 +23,17 @@ I'm deploying on a site with a custom name, not the default domain name that Fir
 
 ### Public (guests)
 
-- page Home (click on logo) - shows all pets from the database
+- page Home (click on logo) - shows all pets from the database (1st dynamic page)
 - page Sign Up (Register) - added routh guard, so logged-in users can't access the page
 - page Sign In (Login) - added route guard, so logged-in users can't access the page
-- 404 page - when user enters an invalid url, he's redirected to this page
+- page 404 - when user enters an invalid url, he's redirected to this page
 
 ### Private (users)
 
-- page Add pet - added route guard, so only logged-in users can access the page
-- Edit & Delete buttons (visible only for users which have added the pet to the database (foster home providers))
-- page Profile (each user has a profile page... **TODO:** which shows a list with his animals added for adoption)
+- page Add pet - added route guard, so only logged-in users can access the page, added data validation and error handling (2nd dynamic page)
+- page Details - each pet card has a button for reaching the Details page which contains more information about the pet. In this page the fosterer of the animal (the user who added the animal to the database) dan update pet's photo, age and description, or to delete the pet from the database. (3rd dynamic page)
+- Edit & Delete buttons on Details page - visible only for users which have added the pet to the database (foster home providers)
+- page Profile - each user has a profile page which is editable - user can add his profile photo, can update it and also can update his user data, all data is stored in Firestore collections (4th dynamic page)
 - Logout button in the header user menu is visible only to logged-in users
 
 ### Bonuses
