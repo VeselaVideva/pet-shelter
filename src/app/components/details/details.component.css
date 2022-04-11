@@ -72,7 +72,7 @@
 
   .details-container {
     position: relative;
-    height: calc(100vh - 11rem);
+    height: auto;
   }
 
   .edit-form {
