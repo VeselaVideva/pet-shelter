@@ -6,7 +6,13 @@
 }
 
 .header .logo {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+}
+
+.header .logo img {
+  max-height: 3rem;
 }
 
 .header img.profile-image-toolbar {
