@@ -69,6 +69,7 @@ button[type="submit"] .mat-icon {
 
 .mat-card-header {
   text-align: left;
+  align-items: center;
 }
 
 .mat-card-avatar {

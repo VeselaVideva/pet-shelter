@@ -1,10 +1,11 @@
 <h2 *ngIf="user$ | async as user">
   Welcome, {{ user.displayName }}!
 </h2>
+<br>
 
 <div class="home-container">
-  <h4 class="center">Pets for adoption</h4>
-
+  <h4 class="center">Find your new best friend!</h4>
+  <br>
   <div class="cards" *ngIf="pets">
     <mat-card class="card" *ngFor="let pet of pets">
       <mat-card-header>
