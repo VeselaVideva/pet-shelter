@@ -125,8 +125,4 @@
   .mat-form-field {
     width: calc(50% - 2rem);
   }
-
-  .mat-card-image {
-    height: 500px;
-  }
 }
