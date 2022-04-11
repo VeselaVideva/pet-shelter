@@ -47,6 +47,7 @@ I'm deploying on a site with a custom name, not the default domain name that Fir
 - Implementation of Scroll-to-top button
 - Media queries CSS for Mobile, Tablet, and Desktop devices
 - I've used SVG images in 2 places
+- Social share buttons that allows the user to share on Facebook or WhatsApp the pet that needs new home
 
 ### Author
 Vesela Videva - [https://videva.dev/](https://videva.dev/)
