@@ -1,17 +1,69 @@
 .pagenotfound {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   min-height: calc(100vh - 12rem);
 }
 
 .pagenotfound h1 {
-  font-size: 8rem;
-  line-height: 1;
+  font-size: 5rem;
+  margin: 5rem 0 6rem;
 }
 
 .pagenotfound button .mat-icon {
   height: 26px;
   font-size: 1.25rem;
+}
+
+.pagenotfound img {
+  position: absolute;
+  top: 0;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  margin: auto;
+  z-index: -1;
+}
+
+
+@media screen and (min-width: 580px) {
+  .pagenotfound h1 {
+    font-size: 8rem;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .pagenotfound h1 {
+    font-size: 9rem;
+    margin: 7rem 0 8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pagenotfound img {
+    max-width: 75vw;
+    right: 2rem;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .pagenotfound img {
+    max-width: 65vw;
+  }
+
+  .pagenotfound h1 {
+    margin: 9rem 0 10rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .pagenotfound img {
+    max-width: 55vw;
+  }
 }

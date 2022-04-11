@@ -26,7 +26,7 @@ I'm deploying on a site with a custom name, not the default domain name that Fir
 - page Home (click on logo) - shows all pets from the database (1st dynamic page)
 - page Sign Up (Register) - added routh guard, so logged-in users can't access the page
 - page Sign In (Login) - added route guard, so logged-in users can't access the page
-- page 404 - when user enters an invalid url, he's redirected to this page
+- page 404 - when user enters an invalid url, he's redirected to this page (contains SVG image)
 
 ### Private (users)
 
@@ -43,7 +43,9 @@ I'm deploying on a site with a custom name, not the default domain name that Fir
 - RxJS used for reactive programming using Observables
 - Used 3rd party API for getting user's IP address - [https://jsonip.com/](https://getjsonip.com/#docs)
 - Used 3rd party API for getting user's geolocation information - [https://app.ipgeolocation.io/](https://app.ipgeolocation.io/)
-- Write media queries CSS for Mobile, Tablet, and Desktop devices
+- Implementation of Scroll-to-top button
+- Media queries CSS for Mobile, Tablet, and Desktop devices
+- I've used SVG images in 2 places
 
 ### Author
 Vesela Videva - [https://videva.dev/](https://videva.dev/)
