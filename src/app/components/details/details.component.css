@@ -48,6 +48,10 @@
   flex-direction: column;
 }
 
+.delete-btn {
+  margin-left: .5rem;
+}
+
 
 /* MEDIA QUERIES CSS */
 @media screen and (min-width: 768px) {

@@ -32,8 +32,12 @@
       </mat-card-content>
 
       <mat-card-actions>
-        <button mat-icon-button color="warn"><mat-icon>favorite</mat-icon></button>
-        <button mat-icon-button color="accent"><mat-icon>share</mat-icon></button>
+        <button mat-icon-button shareButton="facebook" #fbBtn="shareButton"
+          [style.color]="fbBtn?.color"><mat-icon>facebook</mat-icon>
+        </button>
+        <button mat-icon-button shareButton="whatsapp" #wtsBtn="shareButton"
+          [style.color]="wtsBtn?.color"><mat-icon>whatsapp</mat-icon>
+        </button>
         <button mat-icon-button color="primary" routerLink="/details/{{pet.key}}"><mat-icon>open_in_new</mat-icon></button>
       </mat-card-actions>
     </mat-card>

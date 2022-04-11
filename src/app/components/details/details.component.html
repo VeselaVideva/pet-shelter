@@ -48,9 +48,15 @@
           </div>
 
           <mat-card-actions *ngIf="user$ | async as user">
+            <button mat-icon-button shareButton="facebook" #fbBtn="shareButton"
+              [style.color]="fbBtn?.color"><mat-icon>facebook</mat-icon>
+            </button>
+            <button mat-icon-button shareButton="whatsapp" #wtsBtn="shareButton"
+              [style.color]="wtsBtn?.color"><mat-icon>whatsapp</mat-icon>
+            </button>
             <span *ngIf="user?.email === pet?.fosterer">
               <button mat-icon-button color="accent" (click)="showEditForm()"><mat-icon>edit</mat-icon></button>
-              <button mat-icon-button color="warn" (click)="deletePet()"><mat-icon>delete</mat-icon></button>
+              <button class="delete-btn" mat-icon-button color="warn" (click)="deletePet()"><mat-icon>delete</mat-icon></button>
             </span>
           </mat-card-actions>
         </div>

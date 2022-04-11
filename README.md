@@ -15,6 +15,7 @@ Angular project for SoftUni's JS Web Developer learning path.
 - RxJS 7.5.0
 - [@ngneat/hot-toast](https://www.npmjs.com/package/@ngneat/hot-toast)
 - [@ngneat/until-destroy](https://www.npmjs.com/package/@ngneat/until-destroy)
+- [Angular Share Buttons](https://www.npmjs.com/package/ngx-sharebuttons)
 - GitHub
 - GitHub Desktop
 

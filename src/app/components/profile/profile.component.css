@@ -44,7 +44,7 @@ button[type="submit"] .mat-icon {
   font-size: 1.25rem;
 }
 
-.user-pets .mat-icon {
+.user-pets .show-pets-btn .mat-icon {
   height: 22px;
   margin-left: 0.25rem;
   font-size: 1.25rem;

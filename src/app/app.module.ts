@@ -15,6 +15,8 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatCardModule } from "@angular/material/card";
 
 import { HotToastModule } from '@ngneat/hot-toast';
+import { ShareModule } from "ngx-sharebuttons";
+import { ShareIconsModule } from "ngx-sharebuttons/icons";
 
 import { environment } from '../environments/environment';
 
@@ -72,7 +74,9 @@ import { ScrollComponent } from './components/scroll/scroll.component';
     provideStorage(() => getStorage()),
     provideFirestore(() => getFirestore()),
     HotToastModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ShareModule,
+    ShareIconsModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
