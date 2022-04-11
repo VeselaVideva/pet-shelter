@@ -36,6 +36,7 @@ import { AddPetComponent } from './components/add-pet/add-pet.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ScrollComponent } from './components/scroll/scroll.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { DetailsComponent } from './components/details/details.component';
     AddPetComponent,
     ProfileComponent,
     PagenotfoundComponent,
-    DetailsComponent
+    DetailsComponent,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,

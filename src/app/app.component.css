@@ -5,6 +5,10 @@
   justify-content: space-between;
 }
 
+.header .logo {
+  cursor: pointer;
+}
+
 .header img.profile-image-toolbar {
   width: 2rem;
   height: 2rem;
