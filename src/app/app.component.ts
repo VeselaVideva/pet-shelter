@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { DatePipe } from "@angular/common";
 import { Router } from '@angular/router';
+import { HttpClient } from "@angular/common/http";
+
+import { switchMap } from "rxjs";
+
+import { APIkey } from "../environments/environment";
+
 import { AuthService } from "./services/auth/auth.service";
 import { LoadingService } from "./services/loading/loading.service";
-import { HttpClient } from "@angular/common/http";
 import { UsersService } from './services/users/users.service';
-import { DatePipe } from "@angular/common";
-import { switchMap } from "rxjs";
-import { APIkey } from "../environments/environment";
+
 
 @Component({
   selector: 'app-root',
@@ -15,6 +19,7 @@ import { APIkey } from "../environments/environment";
 })
 export class AppComponent {
   title = 'Pet Shelter';
+
   loading$ = this.loader.loading$;
   user$ = this.usersService.currentUserProfile$;
   date$ = this.datePipe.transform((new Date), 'MM/dd/yyyy');

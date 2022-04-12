@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
+
+import { concatMap, switchMap } from "rxjs";
+import { APIkey, dbPath } from "../../../environments/environment";
+import { UserProfile } from "../../models/user-profile";
+
 import { AuthService } from "../../services/auth/auth.service";
 import { ImageUploadService } from "../../services/upload/image-upload.service";
-import { HotToastService } from "@ngneat/hot-toast";
 import { UsersService } from "../../services/users/users.service";
-import { concatMap, switchMap } from "rxjs";
+
 import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
-import { UserProfile } from "../../models/user-profile";
-import { APIkey, dbPath } from "../../../environments/environment";
+import { HotToastService } from "@ngneat/hot-toast";
 
 
 @UntilDestroy()

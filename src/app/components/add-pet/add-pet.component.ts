@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { Pet } from "../../models/pet.model";
+
 import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
 import { UsersService } from "../../services/users/users.service";
+
+import { Pet } from "../../models/pet.model";
 
 
 @Component({

@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
+
 import { doc, setDoc, updateDoc, Firestore, docData } from "@angular/fire/firestore";
-import { UserProfile } from "../../models/user-profile";
+
 import { from, of, Observable, switchMap } from "rxjs";
+
+import { UserProfile } from "../../models/user-profile";
+
 import { AuthService } from "../auth/auth.service";
+
 
 @Injectable({
   providedIn: 'root'

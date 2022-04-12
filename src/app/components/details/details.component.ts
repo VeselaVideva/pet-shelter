@@ -2,11 +2,13 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
-import { Pet } from "../../models/pet.model";
+
 import { dbPath } from "../../../environments/environment";
-import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
+import { Pet } from "../../models/pet.model";
+
 import { UsersService } from "../../services/users/users.service";
 import { LoadingService } from "../../services/loading/loading.service";
+import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
 
 
 @Component({

@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+
+import { map } from "rxjs";
+import { Pet } from "../../models/pet.model";
+
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { RealtimeDbService } from "../../services/realtime-db/realtime-db.service";
 import { UsersService } from "../../services/users/users.service";
 import { LoadingService } from "../../services/loading/loading.service";
-import { map } from "rxjs";
-import { Pet } from "../../models/pet.model";
+
 
 @Component({
   selector: 'app-home',

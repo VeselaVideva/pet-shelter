@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from "@angular/forms";
-import { AuthService } from "../../services/auth/auth.service";
 import { Router } from "@angular/router";
-import { HotToastService } from "@ngneat/hot-toast";
-import { UsersService } from "../../services/users/users.service";
+
 import { switchMap } from "rxjs";
+
+import { AuthService } from "../../services/auth/auth.service";
+import { UsersService } from "../../services/users/users.service";
+
+import { HotToastService } from "@ngneat/hot-toast";
+
 
 export function passwordsMatchValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {

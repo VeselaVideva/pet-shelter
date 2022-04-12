@@ -6,7 +6,9 @@ import {
   signInWithEmailAndPassword,
   updateProfile
 } from "@angular/fire/auth";
+
 import { concatMap, from, Observable, of } from "rxjs";
+
 import firebase from "firebase/compat";
 import UserInfo = firebase.UserInfo;
 
