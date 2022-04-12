@@ -70,6 +70,7 @@
 }
 
 .content {
+  position: relative;
   padding: 2rem 1rem;
   height: calc(100% - 11rem);
   min-height: calc(100vh - 10rem);

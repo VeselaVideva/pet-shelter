@@ -12,6 +12,14 @@ button[type="submit"] .mat-icon {
   font-size: 1.25rem;
 }
 
+.accent-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
 
 /* MEDIA QUERIES CSS */
 @media screen and (min-width: 768px) {
@@ -29,6 +37,18 @@ button[type="submit"] .mat-icon {
     flex-direction: row !important;
     align-items: center;
     justify-content: space-evenly;
+  }
+
+  .accent-img {
+    display: block;
+    max-width: 50%;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .accent-img {
+    max-width: 30%;
   }
 }
 
