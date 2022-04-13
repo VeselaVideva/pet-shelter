@@ -17,6 +17,11 @@ a:-webkit-any-link {
   color: var(--color-steelblue);
 }
 
+a:-webkit-any-link:hover {
+  text-decoration: underline;
+  transition: all .1s ease-in-out;
+}
+
 .form-container {
   min-width: 90vw;
   max-width: 100vw;
@@ -131,4 +136,18 @@ hr {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.mat-icon-button:hover {
+  transform: scale(1.2);
+  transition: all .1s ease-in-out;
+}
+
+.details-btn:hover::after {
+  content: "Details";
+  font-size: .7rem;
+  position: absolute;
+  left: 7%;
+  bottom: -1.25rem;
+  white-space: pre;
 }

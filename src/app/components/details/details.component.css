@@ -48,8 +48,26 @@
   flex-direction: column;
 }
 
+.edit-btn:hover::after {
+  content: "Edit";
+  font-size: .7rem;
+  position: absolute;
+  left: 25%;
+  bottom: -1.25rem;
+  white-space: pre;
+}
+
 .delete-btn {
   margin-left: .5rem;
+}
+
+.delete-btn:hover::after {
+  content: "Delete";
+  font-size: .7rem;
+  position: absolute;
+  left: 10%;
+  bottom: -1.25rem;
+  white-space: pre;
 }
 
 

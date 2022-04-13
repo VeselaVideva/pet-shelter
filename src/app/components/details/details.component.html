@@ -55,7 +55,7 @@
               [style.color]="wtsBtn?.color"><mat-icon>whatsapp</mat-icon>
             </button>
             <span *ngIf="user?.email === pet?.fosterer">
-              <button mat-icon-button color="accent" (click)="showEditForm()"><mat-icon>edit</mat-icon></button>
+              <button class="edit-btn" mat-icon-button color="accent" (click)="showEditForm()"><mat-icon>edit</mat-icon></button>
               <button class="delete-btn" mat-icon-button color="warn" (click)="deletePet()"><mat-icon>delete</mat-icon></button>
             </span>
           </mat-card-actions>

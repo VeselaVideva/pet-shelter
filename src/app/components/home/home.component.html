@@ -38,7 +38,9 @@
         <button mat-icon-button shareButton="whatsapp" #wtsBtn="shareButton"
           [style.color]="wtsBtn?.color"><mat-icon>whatsapp</mat-icon>
         </button>
-        <button mat-icon-button color="primary" routerLink="/details/{{pet.key}}"><mat-icon>open_in_new</mat-icon></button>
+        <button class="details-btn" mat-icon-button color="primary" routerLink="/details/{{pet.key}}">
+          <mat-icon>open_in_new</mat-icon>
+        </button>
       </mat-card-actions>
     </mat-card>
   </div>

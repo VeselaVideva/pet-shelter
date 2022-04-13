@@ -106,6 +106,15 @@ button[type="submit"] .mat-icon {
   display: none;
 }
 
+.details-btn:hover::after {
+  content: "Details";
+  font-size: .7rem;
+  position: absolute;
+  left: 7%;
+  top: -1.05rem;
+  white-space: pre;
+}
+
 
 /* MEDIA QUERIES CSS */
 @media screen and (min-width: 768px) {

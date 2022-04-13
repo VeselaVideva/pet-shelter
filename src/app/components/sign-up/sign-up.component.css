@@ -1,6 +1,7 @@
 span.new {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 a.switch {
@@ -14,6 +15,7 @@ a.switch .mat-icon {
   margin-right: 0.25rem;
   height: 26px;
 }
+
 
 /* MEDIA QUERIES CSS */
 @media screen and (min-width: 768px) {
